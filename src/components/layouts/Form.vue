@@ -128,9 +128,11 @@ const handleSubmit = async () => {
 
       <Input id="nominal" type="text" label="Nominal" :value="nominalDisplay" @input="handleNominalInput" placeholder="0" prefix="Rp" :error="errors.nominal" required />
 
-      <Button type="submit" :loading="isLoading" icon="bi bi-file-earmark-pdf">
-        {{ isLoading ? "Generating..." : "Generate PDF" }}
-      </Button>
+      <div class="flex justify-end">
+        <Button type="submit" :loading="isLoading" icon="bi bi-file-earmark-pdf">
+          {{ isLoading ? "Generating..." : "Generate PDF" }}
+        </Button>
+      </div>
     </form>
   </div>
 </template>
